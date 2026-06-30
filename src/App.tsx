@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Brain as Train, Brain, Eye, Zap, Target, FileText, Lock, ChevronRight, Shield } from 'lucide-react';
+import { Brain, Eye, Zap, Target, FileText, Lock, ChevronRight, Shield } from 'lucide-react';
 import SubscriptionModal from './components/SubscriptionModal';
 
 interface TestCard {
@@ -106,17 +106,10 @@ export default function App() {
           transition={{ duration: 0.6 }}
           className="text-center mb-14"
         >
-          <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-blue-900/25 border border-blue-700/35 rounded-full">
-            <Train size={15} className="text-blue-400" />
-            <span className="text-blue-300 text-sm font-semibold tracking-widest uppercase">
-              Railway Recruitment Board
-            </span>
-          </div>
-
           <h1 className="text-4xl md:text-5xl font-black text-white mb-4 tracking-tight leading-tight">
-            Loco Pilot Psychometric
+            LocoPilot Psychometric Test Series
             <br />
-            <span className="text-blue-400">Test Series</span>
+            <span className="text-blue-400 text-2xl md:text-3xl font-semibold">(Eligibility Test to Drive High Speed Trains)</span>
           </h1>
           <p className="text-gray-400 text-base max-w-lg mx-auto leading-relaxed">
             All 5 official psychometric assessments for Loco Pilot & Assistant Loco Pilot recruitment — practice the way you'll be tested.
@@ -195,18 +188,12 @@ export default function App() {
           })}
         </div>
 
-        {/* Footer note */}
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.8 }}
-          className="text-center text-gray-600 text-xs mt-10"
-        >
-          Tests aligned with official RRB ALP / Loco Pilot psychometric assessment patterns.
-        </motion.p>
       </div>
 
       {showModal && <SubscriptionModal onClose={() => setShowModal(false)} />}
     </div>
   );
 }
+
+
+export default App
